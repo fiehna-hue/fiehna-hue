@@ -5,7 +5,7 @@ IT infrastructure professional with 8+ years in IT support, systems administrati
 ## What I'm working on
 
 - Containers and Kubernetes (Docker Compose done, kind and EKS next)
-- Infrastructure as code with Terraform on AWS
+- Infrastructure as code with Terraform on AWS, shipped through a plan-on-PR, apply-on-merge pipeline
 - CI/CD with GitHub Actions and keyless AWS authentication (OIDC)
 - AWS certifications: Cloud Practitioner and Solutions Architect Associate in progress
 
@@ -13,6 +13,7 @@ IT infrastructure professional with 8+ years in IT support, systems administrati
 
 | Project | What it shows |
 |---|---|
+| [aws-platform-as-code](https://github.com/fiehna-hue/aws-platform-as-code) | Flagship project: Terraform modules (VPC, RDS, interface endpoints, ECS Fargate behind an ALB) shipped through a reviewed pipeline with OIDC, least-privilege IAM, a protected main branch, 8 documented incidents and design decisions |
 | [inventory-infra](https://github.com/fiehna-hue/inventory-infra) | Production-style ECS Fargate stack in Terraform: ALB across two AZs, RDS in isolated subnets, Secrets Manager, autoscaling, CloudWatch alarm, and documented incident write-ups |
 | [inventory-app](https://github.com/fiehna-hue/inventory-app) | Flask and Postgres API with Docker Compose, multi-stage non-root image, and a GitHub Actions pipeline that scans with Trivy and pushes to ECR using OIDC with no stored AWS keys |
 | [cloud-labs](https://github.com/fiehna-hue/cloud-labs) | Smaller labs: Lambda container images and an ECS Fargate quickstart |
@@ -28,4 +29,4 @@ Every lab ends with a verified teardown to keep costs near zero, and I write up 
 
 ## Connect
 
-[LinkedIn](https://www.linkedin.com/in/YOUR-NAME)
+[LinkedIn](https://www.linkedin.com/in/fiehna-njo-392170444)
