@@ -1,4 +1,4 @@
-# Hi, I'm Fiehna Njofie
+# Hi, I'm Fiehna 
 
 I broke my own AWS pipeline 8 times on purpose to learn from it, and wrote every failure down.
 
