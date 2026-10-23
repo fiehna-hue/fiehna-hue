@@ -1,13 +1,24 @@
 # Hi, I'm Fiehna Njofie
 
-IT infrastructure professional with 8+ years in IT support, systems administration, networking, and enterprise infrastructure. I'm building hands-on cloud and DevOps projects on AWS and publishing them here.
+I broke my own AWS pipeline 8 times on purpose to learn from it, and wrote every failure down.
 
-## What I'm working on
+Over the past few weeks I built a small AWS platform entirely in Terraform, and shipped it through a pull-request pipeline:
 
-- Containers and Kubernetes (Docker Compose done, kind and EKS next)
-- Infrastructure as code with Terraform on AWS, shipped through a plan-on-PR, apply-on-merge pipeline
-- CI/CD with GitHub Actions and keyless AWS authentication (OIDC)
-- AWS certifications: Cloud Practitioner and Solutions Architect Associate in progress
+- Pull requests run terraform plan with a read-only role and post the plan as a comment
+- Merging to main runs terraform apply with a separate write role
+- GitHub Actions authenticates to AWS with OIDC, so there are no stored access keys
+- The stack: VPC with isolated subnets, RDS Postgres with a managed password, private ECS Fargate tasks behind a load balancer, and VPC endpoints instead of a NAT gateway
+
+The part I learned the most from was the failures: a trust policy that did not match GitHub's new OIDC subject (found in CloudTrail), an IAM permission missing at apply time that the read-only plan could not catch, and a text editor that silently corrupted a workflow file. Each one is in the incident log with symptom, diagnosis, cause, fix and lesson.
+
+I built it, tested it end to end, and destroyed it through the same pipeline. The whole build cost well under a dollar.
+
+Code, diagrams, IAM policies and the incident log:
+https://github.com/fiehna-hue/aws-platform-as-code
+
+I am looking for remote cloud and DevOps roles. If your team hires for that, I would love to hear from you.
+
+#AWS #Terraform #DevOps #GitHubActions #CloudEngineering
 
 ## Projects
 
