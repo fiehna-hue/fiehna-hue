@@ -25,6 +25,8 @@ I am looking for remote cloud and DevOps roles. If your team hires for that, I w
 | Project | What it shows |
 |---|---|
 | [aws-platform-as-code](https://github.com/fiehna-hue/aws-platform-as-code) | Flagship project: Terraform modules (VPC, RDS, interface endpoints, ECS Fargate behind an ALB) shipped through a reviewed pipeline with OIDC, least-privilege IAM, a protected main branch, 8 documented incidents and design decisions |
+| [eks-inventory-platform](https://github.com/fiehna-hue/eks-inventory-platform) | Amazon EKS (cluster, managed node group, dedicated VPC) provisioned and destroyed through a protected pull-request pipeline with OIDC and name-scoped least-privilege roles, plus an incident log |
+| [k8s-inventory-kind](https://github.com/fiehna-hue/k8s-inventory-kind) | Inventory API and Postgres on Kubernetes (kind): StatefulSet, probes, rolling updates and rollback, with documented incidents |
 | [inventory-infra](https://github.com/fiehna-hue/inventory-infra) | Production-style ECS Fargate stack in Terraform: ALB across two AZs, RDS in isolated subnets, Secrets Manager, autoscaling, CloudWatch alarm, and documented incident write-ups |
 | [inventory-app](https://github.com/fiehna-hue/inventory-app) | Flask and Postgres API with Docker Compose, multi-stage non-root image, and a GitHub Actions pipeline that scans with Trivy and pushes to ECR using OIDC with no stored AWS keys |
 | [cloud-labs](https://github.com/fiehna-hue/cloud-labs) | Smaller labs: Lambda container images and an ECS Fargate quickstart |
